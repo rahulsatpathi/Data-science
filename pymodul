@@ -1,0 +1,38 @@
+#draft Module1
+name="Rajeev"
+def getmsg():
+    print("getmsg function from module-1")
+def getmsg1(name):
+    print("getmsg1 function from module-1")
+    print("name is ",name)
+    
+del getmsg
+del getmsg1
+import Module1
+Module1.getmsg()
+Module1.getmsg1('Rajeev')
+Module1.name="Ashok"
+print(Module1.name)
+
+output:
+getmsg fucntion from module-1
+getmsg1 fucntion from module-1
+name is  Rajeev
+Ashok
+
+import Module1 as m1
+m1.getmsg()
+m1.getmsg1('Rajeev')
+m1.name="Ashok"
+print(m1.name)
+
+output :
+getmsg fucntion from module-1
+getmsg1 fucntion from module-1
+name is  Rajeev
+Ashok
+
+from Module1 import getmsg
+getmsg()
+
+output :
